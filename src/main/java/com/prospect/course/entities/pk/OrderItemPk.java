@@ -13,11 +13,11 @@ import com.prospect.course.entities.Product;
 public class OrderItemPk implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
-	@ManyToOne
+	@ManyToOne 
 	@JoinColumn(name = "order_id")
 	private Order order;
 	
-	@ManyToOne
+	@ManyToOne 
 	@JoinColumn(name = "product_id")
 	private Product product;
 	
