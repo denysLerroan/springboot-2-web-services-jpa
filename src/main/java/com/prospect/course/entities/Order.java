@@ -41,7 +41,7 @@ public class Order implements Serializable{
 	@OneToMany(mappedBy = "id.order") 
 	@Fetch(FetchMode.JOIN)
 	private Set<OrderItem> items = new HashSet<>();
-	
+		
 	public Order() {
 	}
 
