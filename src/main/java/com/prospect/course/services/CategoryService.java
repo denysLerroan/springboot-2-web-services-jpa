@@ -31,5 +31,15 @@ public class CategoryService {
 	public void delete(Long id) {
 		repository.deleteById(id);
 	}
+	
+	public Category update(Long id, Category obj) {
+			Category entity = repository.getOne(id);
+			updateDate(entity, obj);
+			return repository.save(entity);
+	}
+
+	private void updateDate(Category entity, Category obj) {
+		entity.setName(obj.getName());
+	}
 
 }
